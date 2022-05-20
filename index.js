@@ -9,10 +9,10 @@ function findMatching(drivers, name) {
 Console.log(driverName);
 
 function fuzzyMatch(drivers, letter) {
-   let filteredNames = drivers.filter(function(word) {
-         return word.charAt(index(0)) === letter;
-      });
-      return filteredNames;
+   return drivers.filter(name => name.indexOf(letter) === 0)
+
   };
 
-Console.log(filteredNames);
+function matchName(drivers, namePut) {
+    return drivers.filter(item => item.name === namePut)
+}
